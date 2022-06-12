@@ -1,0 +1,22 @@
+# Pywal themes
+
+alias gruvbox="wal --theme base16-gruvbox-hard"
+alias nord="wal --theme base16-nord"
+alias city="wal -i ~/Images/wallpapers/city07.jpg"
+alias gray="wal --theme base16-grayscale"
+
+# Apps
+alias vim="nvim"
+alias mixer="alsamixer"
+
+# Scripts
+alias bandcamp="campdown"
+
+# Shortcuts
+alias cal="cal -3"
+alias d="dirs -v"
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+alias ..="cd .."
+alias ...="cd .. && cd .."
+alias ....="cd .. && cd .. && cd .."

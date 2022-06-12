@@ -1,0 +1,5 @@
+[ options ]
+font = Inconsolata Nerd Font 8
+allow_bold = true
+browser = firefox
+
