@@ -29,17 +29,17 @@ ln -sf "$HOME/dotfiles/polybar/config" "$HOME/.config/polybar"
 ln -sf "$HOME/dotfiles/polybar/launch.sh" "$HOME/.config/polybar"
 
 # fonts
-mkdir -p "$XDG_DATA_HOME"
-cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
+# mkdir -p "$XDG_DATA_HOME"
+# cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
 
 # dunst
-mkdir -p "$XDG_CONFIG_HOME/dunst"
-ln -sf "$DOTFILES/dunst/dunstrc" "$XDG_CONFIG_HOME/dunst/dunstrc"
+# mkdir -p "$XDG_CONFIG_HOME/dunst"
+# ln -sf "$DOTFILES/dunst/dunstrc" "$XDG_CONFIG_HOME/dunst/dunstrc"
 
 # termite
-mkdir -p "$XDG_CONFIG_HOME/termite"
-ln -sf "$DOTFILES/termite/config" "$XDG_CONFIG_HOME/termite/config"
+# mkdir -p "$XDG_CONFIG_HOME/termite"
+# ln -sf "$DOTFILES/termite/config" "$XDG_CONFIG_HOME/termite/config"
 
 # tmux
-mkdir -p "$XDG_CONFIG_HOME/tmux"
-ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+# mkdir -p "$XDG_CONFIG_HOME/tmux"
+# ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
