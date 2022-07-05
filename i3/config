@@ -13,11 +13,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Inconsolata Nerd Font 8
+# font pango:Inconsolata Nerd Font 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -54,7 +54,7 @@ default_border pixel 1
 default_floating_border none
 
 # Hide borders
-hide_edge_borders none
+hide_edge_borders smart
 
 # Change borders
 bindsym $mod+i border normal
@@ -158,16 +158,16 @@ bindsym $mod+9 workspace number $ws9
 # bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-# bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+# bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws1
 
 # Scratchpad
 bindsym $mod+Shift+0 move scratchpad
@@ -178,6 +178,9 @@ bindsym $mod+Right move workspace to output right
 bindsym $mod+Down move workspace to output down
 bindsym $mod+Left move workspace to output left
 bindsym $mod+Up move workspace to output up
+
+# Assign windows to workspaces
+assign [class="firefox"] 2
 
 
      #################
@@ -190,7 +193,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Ctrl+s) shutdown
+# TODO
 
 # Set shut down, restart and locking features
 bindsym $mod+e mode "$mode_system"
@@ -272,8 +277,10 @@ client.background       $color0  $color0   $color1     $color0    $color0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # dunst
 exec --no-startup-id dunst
+#termite
+exec --no-startup-id termite
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "DejaVuSansMono-8" -b
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a

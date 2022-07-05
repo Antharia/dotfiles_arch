@@ -151,9 +151,9 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 inherit = network-base
 interface-type = wireless
 # label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
-format-prefix = "WIFI "
-format-prefix-foreground = ${colors.primary}
-label-connected =  %essid% %local_ip%
+# label-connected =  %essid% %local_ip%
+label-connected = "wired"
+label-disconnected = "Ø"
 
 [module/eth]
 inherit = network-base

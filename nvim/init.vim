@@ -48,6 +48,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set smartcase
 " Give more space for displaying messages.
 set cmdheight=2
 set nobackup
@@ -87,10 +88,14 @@ let g:nord_italic_comments = 1
 
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme pywal
+
+
 "    +---------+
 "    | Mapping |
 "    +---------+
 
+" Add timestamp
+nmap <F5> !!date "+\%Y/\%m/\%d-\%H:\%M"<C-R><Esc>
 
 " Replace ESC with fd
 :imap fd <Esc>
@@ -185,9 +190,12 @@ let wiki_main.path_html = '~/Documents/vimwiki/html'
 
 let wiki_website = {}
 let wiki_website.path = '~/Documents/wiki_website'
-let wiki_website.path_html = '~/Documents/wiki_website/html'
-let wiki_website.name = 'wiki_website'
+let wiki_website.path_html = "$HOME/Repos/antharia.github.io/" 
+let wiki_website.name = 'antharia.github.io'
 let wiki_website.auto_export = 1
+let wiki_website.template_path = "$HOME/Repos/antharia.github.io/templates"
+let wiki_website.template_default = "default"
+let wiki_website.template_ext = ".html"
 
 let wiki_rpg = {}
 let wiki_rpg.path = '~/Documents/wiki_rpg'
