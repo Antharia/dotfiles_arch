@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Hack Nerd Font 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -180,7 +180,7 @@ bindsym $mod+Left move workspace to output left
 bindsym $mod+Up move workspace to output up
 
 # Assign windows to workspaces
-assign [class="firefox"] 2
+assign [class="firefox"] workspace $ws2
 
 
      #################
@@ -280,7 +280,7 @@ exec --no-startup-id dunst
 #termite
 exec --no-startup-id termite
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "DejaVuSansMono-8" -b
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "Hack Nerd Font-8" -b
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
