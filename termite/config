@@ -1,5 +1,5 @@
 [ options ]
-font = DejaVu Sans Mono 8
+font = Hack Nerd Font 8
 allow_bold = true
 browser = firefox
 

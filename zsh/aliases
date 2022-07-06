@@ -13,6 +13,7 @@ alias mixer="alsamixer"
 alias bandcamp="campdown"
 
 # Shortcuts
+alias ls="lsd"
 alias cal="cal -3"
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index

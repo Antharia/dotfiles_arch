@@ -1,12 +1,14 @@
 call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
 Plug 'vimwiki/vimwiki'
-Plug 'ambv/black'
+let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
+Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'itchyny/calendar.vim'
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'beauwilliams/statusline.lua'
 " themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
