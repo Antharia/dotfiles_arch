@@ -17,6 +17,8 @@ alias ls="lsd"
 alias cal="cal -3"
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+alias shutdown="shutdown now"
+alias shutup="systemctl suspend"
 
 alias ..="cd .."
 alias ...="cd .. && cd .."
