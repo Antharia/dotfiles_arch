@@ -50,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 2
 default_floating_border none
 
 # Hide borders
@@ -59,7 +59,7 @@ hide_edge_borders smart
 # Change borders
 bindsym $mod+i border normal
 bindsym $mod+o border none
-bindsym $mod+p border pixel 1
+bindsym $mod+p border pixel 2
 
 # start a terminal
 bindsym $mod+Return exec termite

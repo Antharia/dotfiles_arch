@@ -22,7 +22,7 @@ background-alt = ${xrdb:color8:#373B41}
 foreground = ${xrdb:color7:#C5C8C6}
 primary = ${xrdb:color4:#F0C674}
 secondary = ${xrdb:color5:#8ABEB7}
-alert = ${xrdb:color2:#A54242}
+alert = ${xrdb:color1:#A54242}
 disabled = ${xrdb:color6:#707880}
 
 [bar/example]
@@ -53,7 +53,7 @@ module-margin = 1
 font-0 = "Hack Nerd Font:size=8;2"
 
 
-modules-left = xworkspaces xwindow
+modules-left = xworkspaces xwindow timewarrior
 modules-right = filesystem temperature memory cpu wlan battery pulseaudio date
 
 cursor-click = pointer
@@ -68,6 +68,28 @@ enable-ipc = true
 wm-restack = i3
 
 ; override-redirect = true
+
+[module/timewarrior]
+type = custom/script
+label = %output%
+tail = true
+interval = 1
+exec = timew
+exec-if = true
+format = <label>
+format-background = ${colors.background} # a color you want for the text background
+format-foreground = ${colors.foreground} # a color you want for the text foreground
+format-prefix = "祥 "
+format-padding = 4
+format-prefix-foreground = ${colors.primary}
+
+[module/info-hackspeed]
+type = custom/script
+exec = ~/dotfiles/polybar/info-hackspeed.sh
+tail = true
+keyboard_id = AT Translated Set 2 keyboard 
+metric = cpm 
+layout = azerty
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -99,10 +121,10 @@ interval = 5
 
 mount-0 = /
 
-label-mounted = 﫭 %percentage_used%%
+format-prefix = "﫭"
+format-prefix-foreground = ${colors.primary}
+label-mounted = " %percentage_used%%"
 
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.disabled}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -177,9 +199,10 @@ type = internal/temperature
 interval = 2
 base-temperature = 20
 warn-temperature = 50
+format-prefix = 
 format-prefix-foreground = ${colors.primary}
-label = " %temperature-c%"
-label-foreground = ${colors.primary}
+label = " %temperature-c%"
+label-foreground = ${colors.foreground}
 label-warn = " %temperature-c%"
 label-warn-foreground = ${colors.alert}
 
