@@ -55,3 +55,6 @@ source ~/.cache/wal/colors-tty.sh
 # Needed for pywal
 export PATH="/home/antharia/.local/bin:$PATH"
 
+# Go installation
+export PATH=$PATH:/usr/local/go/bin
+

@@ -10,8 +10,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'beauwilliams/statusline.lua'
 " themes
-Plug 'arcticicestudio/nord-vim'
-Plug 'morhetz/gruvbox'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'morhetz/gruvbox'
 Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
 call plug#end()
 

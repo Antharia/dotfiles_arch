@@ -53,7 +53,7 @@ module-margin = 1
 font-0 = "Hack Nerd Font:size=8;2"
 
 
-modules-left = xworkspaces xwindow timewarrior
+modules-left = xworkspaces timewarrior
 modules-right = filesystem temperature memory cpu wlan battery pulseaudio date
 
 cursor-click = pointer

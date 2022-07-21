@@ -4,6 +4,7 @@ alias gruvbox="wal --theme base16-gruvbox-hard"
 alias nord="wal --theme base16-nord"
 alias city="wal -i ~/Images/wallpapers/city07.jpg"
 alias gray="wal --theme base16-grayscale"
+alias dracula="wal --theme base16-dracula"
 
 # Apps
 alias vim="nvim"
@@ -17,7 +18,6 @@ alias ls="lsd"
 alias cal="cal -3"
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
-alias shutdown="shutdown now"
 alias shsh="systemctl suspend"
 
 alias ..="cd .."

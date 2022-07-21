@@ -50,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 2
+default_border pixel 1
 default_floating_border none
 
 # Hide borders
@@ -59,7 +59,7 @@ hide_edge_borders smart
 # Change borders
 bindsym $mod+i border normal
 bindsym $mod+o border none
-bindsym $mod+p border pixel 2
+bindsym $mod+p border pixel 1
 
 # start a terminal
 bindsym $mod+Return exec termite
@@ -239,12 +239,12 @@ set_from_resource $color15    color15
 
 # Theme colors
 # class                 border   backgr.   text        indic.     child_border
-client.focused          $color5  $color3   $color0     $color3    $color3
-client.focused_inactive $color0  $color0   $color3     $color3    $color0
-client.unfocused        $color0  $color0   $color3     $color3    $color0
-client.urgent           $color6  $color1   $color11    $color3    $color1
-client.placeholder      $color3  $color3   $color11    $color3    $color1
-client.background       $color0  $color0   $color1     $color0    $color0
+client.focused          $color3  $color0   $color3     $color3    $color3
+client.focused_inactive $color4  $color0   $color3     $color3    $color4
+client.unfocused        $color5  $color0   $color3     $color3    $color1
+client.urgent           $color1  $color1   $color11    $color3    $color2
+client.placeholder      $color1  $color3   $color11    $color3    $color5
+client.background       $color0  $color0   $color1     $color0    $color1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -272,7 +272,10 @@ client.background       $color0  $color0   $color1     $color0    $color0
           # APPLICATIONS #
           ################
 
-
+# renoise
+for_window [class="renoise"] floating enable
+# reaper
+for_window [class="reaper"] floating enable
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # dunst
