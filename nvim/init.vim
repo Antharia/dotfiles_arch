@@ -212,3 +212,7 @@ let wiki_portfolio.path_html = '~/Documents/wiki_portfolio/html'
 let wiki_portfolio.name = 'portfolio'
 
 let g:vimwiki_list = [wiki_main, wiki_website, wiki_rpg, wiki_portfolio]
+
+" ---- Coc settings ---- "
+"
+autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
