@@ -27,7 +27,7 @@ disabled = ${xrdb:color6:#707880}
 
 [bar/example]
 width = 100%
-height = 18pt
+height = 20pt
 radius = 0
 
 ; dpi = 96
@@ -38,7 +38,7 @@ foreground = ${colors.foreground}
 line-size = 1pt
 
 border-size = 0pt
-border-color = #00000000
+border-color = ${colors.secondary}
 
 padding-left = 0
 padding-right = 1
@@ -54,7 +54,7 @@ font-0 = "Hack Nerd Font:size=8;2"
 
 
 modules-left = xworkspaces timewarrior
-modules-right = filesystem temperature memory cpu wlan battery pulseaudio date
+modules-right = filesystem temperature memory cpu pulseaudio wlan battery date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -80,7 +80,7 @@ format = <label>
 format-background = ${colors.background} # a color you want for the text background
 format-foreground = ${colors.foreground} # a color you want for the text foreground
 format-prefix = "祥 "
-format-padding = 4
+format-padding = 2
 format-prefix-foreground = ${colors.primary}
 
 [module/info-hackspeed]
@@ -94,20 +94,27 @@ layout = azerty
 [module/xworkspaces]
 type = internal/xworkspaces
 
-label-active = %name%
+icon-0 = 1;
+icon-1 = 2;爵
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-default = ♟
+
+label-active = %icon%
 label-active-background = ${colors.primary}
 label-active-foreground = ${colors.background}
 label-active-underline= ${colors.primary}
 label-active-padding = 1
 
-label-occupied = %name%
+label-occupied = %icon%
 label-occupied-padding = 1
 
-label-urgent = %name%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-label-empty = %name%
+label-empty = %icon%
 label-empty-foreground = ${colors.disabled}
 label-empty-padding = 1
 
@@ -121,9 +128,10 @@ interval = 5
 
 mount-0 = /
 
-format-prefix = "﫭"
-format-prefix-foreground = ${colors.primary}
-label-mounted = " %percentage_used%%"
+format-mounted-prefix = "﫭 "
+format-mounted-prefix-foreground = ${colors.primary}
+format-mounted = <label-mounted>
+label-mounted =  %percentage_used%%
 
 
 [module/pulseaudio]
@@ -219,7 +227,7 @@ format-low = <label-low> <animation-low>
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
-label-full = FULL
+label-full = ""
 label-low = LOW
 
 ramp-capacity-0 = 

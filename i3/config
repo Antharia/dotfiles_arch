@@ -134,11 +134,11 @@ bindsym $mod+c move position center
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 ""
-set $ws2 "爵"
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -239,10 +239,10 @@ set_from_resource $color15    color15
 
 # Theme colors
 # class                 border   backgr.   text        indic.     child_border
-client.focused          $color0  $color0   $color15     $color3    $color3
-client.focused_inactive $color0  $color0   $color8     $color3    $color1
+client.focused          $color0  $color0   $color15    $color3    $color3
+client.focused_inactive $color0  $color0   $color8     $color3    $color0
 client.unfocused        $color0  $color0   $color8     $color3    $color0
-client.urgent           $color1  $color1   $color11    $color3    $color2
+client.urgent           $color1  $color1   $color11    $color3    $color0
 client.placeholder      $color1  $color3   $color11    $color3    $color0
 client.background       $color0  $color0   $color1     $color0    $color1
 
