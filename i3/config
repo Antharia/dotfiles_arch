@@ -276,6 +276,11 @@ client.background       $color0  $color0   $color1     $color0    $color1
 for_window [class="renoise"] floating enable
 # reaper
 for_window [class="reaper"] floating enable
+# pure data 
+for_window [class="PatchWindow"] floating enable
+for_window [class="PdWindow"] floating enable
+for_window [class="HelpBrowser"] floating enable
+
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # dunst
@@ -284,6 +289,8 @@ exec --no-startup-id dunst
 exec --no-startup-id termite
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "Hack Nerd Font-8" -b
+# start rofi
+bindsym $mod+r exec --no-startup-id rofi -show run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
