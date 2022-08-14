@@ -5,6 +5,7 @@ alias nord="wal --theme base16-nord"
 alias city="wal -i ~/Images/wallpapers/city07.jpg"
 alias gray="wal --theme base16-grayscale"
 alias dracula="wal --theme base16-dracula"
+alias malkuth="wal --theme malkuth"
 
 # Apps
 alias vim="nvim"
