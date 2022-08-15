@@ -6,6 +6,8 @@ mkdir -p "$HOME/.config/nvim/undo"
 ln -sf "$HOME/dotfiles/nvim/init.vim" "$HOME/.config/nvim"
 rm -rf "$HOME/.config/nvim/bundle"
 ln -s "$HOME/dotfiles/nvim/bundle" "$HOME/.config/nvim"
+rm -rf "$HOME/.config/nvim/coc-settings.json"
+ln -sf "$HOME/dotfiles/nvim/coc-settings.json" "$HOME/.config/nvim"
 
 # Xresources
 rm -rf "$HOME/.config/X11"

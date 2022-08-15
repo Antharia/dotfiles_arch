@@ -50,11 +50,14 @@ module-margin = 1
 
 ;font-0 = "Inconsolata Nerd Font Complete Mono:size=8;2"
 ;font-0 = "DejaVuSansMono:size=8;2"
-font-0 = "Hack Nerd Font:size=8;2"
+;font-0 = "Hack Nerd Font:size=8;2"
+font-0 = "NotoSansMono Nerd Font:size=8;2"
+
+
 
 
 modules-left = xworkspaces timewarrior
-modules-right = filesystem temperature memory cpu pulseaudio wlan battery date
+modules-right = battery filesystem temperature memory cpu pulseaudio date wlan
 
 cursor-click = pointer
 cursor-scroll = ns-resize

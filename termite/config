@@ -1,5 +1,4 @@
 [ options ]
-font = Hack Nerd Font 8
+font = NotoSansMono Nerd Font 8
 allow_bold = true
-browser = firefox
-
+browser = brave

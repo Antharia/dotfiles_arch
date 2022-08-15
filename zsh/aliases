@@ -20,6 +20,7 @@ alias cal="cal -3"
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 alias shsh="systemctl suspend"
+alias audiodl="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist --add-metadata "
 
 alias ..="cd .."
 alias ...="cd .. && cd .."
