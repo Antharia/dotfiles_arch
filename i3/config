@@ -284,6 +284,8 @@ for_window [class="HelpBrowser"] floating enable
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bindsym $mod+Shift+g exec --no-startup-id polybar-msg cmd hide
+bindsym $mod+g exec --no-startup-id polybar-msg cmd show
 # dunst
 exec --no-startup-id dunst
 #termite
