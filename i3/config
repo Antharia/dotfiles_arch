@@ -273,14 +273,16 @@ client.background       $color0  $color0   $color1     $color0    $color1
           # APPLICATIONS #
           ################
 
-# renoise
-for_window [class="renoise"] floating enable
-# reaper
-for_window [class="reaper"] floating enable
 # pure data 
 for_window [class="PatchWindow"] floating enable
 for_window [class="PdWindow"] floating enable
 for_window [class="HelpBrowser"] floating enable
+
+for_window [class="renoise"] floating enable
+for_window [class="reaper"] floating enable
+for_window [class="arandr"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="Cadence"] floating enable
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

@@ -45,3 +45,7 @@ ln -sf "$HOME/dotfiles/polybar/launch.sh" "$HOME/.config/polybar"
 # tmux
 # mkdir -p "$XDG_CONFIG_HOME/tmux"
 # ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# gtk3
+rm $HOME/.config/gtk-3.0/gtk.css
+ln -sf "$HOME/dotfiles/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
