@@ -22,6 +22,7 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 alias shsh="systemctl suspend"
 alias audiodl="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist --add-metadata "
 alias nnn="nnn -C"
+alias selfie="mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --vo=tct"
 
 alias ..="cd .."
 alias ...="cd .. && cd .."

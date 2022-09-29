@@ -17,6 +17,9 @@ let g:tidal_target = "terminal"
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'morhetz/gruvbox'
 Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 set nocompatible
@@ -238,4 +241,9 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
 " ---- nvim-autopairs settings ---- "
 lua << EOF
 require("nvim-autopairs").setup {}
+EOF
+
+" ---- lualine settings ---- "
+lua << EOF
+require('lualine').setup()
 EOF
