@@ -6,7 +6,7 @@ Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
 Plug 'junegunn/goyo.vim'
-Plug 'tidalcycles/vim-tidal'
+" Plug 'tidalcycles/vim-tidal'
 let g:tidal_target = "terminal"
 " Plug 'beauwilliams/statusline.lua'
 " Plug 'tpope/vim-fugitive' "wrapper for git
@@ -17,9 +17,11 @@ let g:tidal_target = "terminal"
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'morhetz/gruvbox'
 Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
+Plug 'dylanaraps/wal.vim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 set nocompatible
@@ -75,9 +77,9 @@ if (empty($TMUX))
   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
   " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
+  " if (has("termguicolors"))
+    " set termguicolors
+  " endif
 endif
 
 " Use <c-space> to trigger completion.
@@ -96,7 +98,7 @@ let g:nord_cursor_line_number_background = 1
 let g:nord_italic_comments = 1
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme pywal
+colorscheme wal
 
 
 "    +---------+

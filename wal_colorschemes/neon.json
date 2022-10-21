@@ -1,0 +1,25 @@
+{
+  "name": "neon",
+  "author": "antharia",
+  "color": [
+    "#121212",
+    "#22dbd3",
+    "#c022db",
+    "#5e22db",
+    "#db7822",
+    "#db225f",
+    "#2247db",
+    "#808080",
+    "#dddddd",
+    "#22dbd3",
+    "#c022db",
+    "#5e22db",
+    "#db7822",
+    "#db225f",
+    "#2247db",
+    "#bbbbbb"
+  ],
+  "foreground": "#ffffff",
+  "background": "#080808"
+}
+
