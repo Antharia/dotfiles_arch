@@ -1,6 +1,6 @@
 # Pywal themes
 
-alias gruvbox="wal --theme gruvbox-hard"
+alias gruvbox="wal --theme gruvbox-dark"
 alias nord="wal --theme base16-nord"
 alias city="wal -i ~/Images/wallpapers/city07.jpg"
 alias gray="wal --theme base16-grayscale"
@@ -10,7 +10,6 @@ alias gotham="wal --theme sexy-gotham"
 
 # Apps
 alias vim="nvim"
-alias mixer="alsamixer"
 
 # Scripts
 alias bandcamp="campdown"

@@ -25,8 +25,8 @@ xsetwacom --set "$tabletstylus" MapToOutput "VGA-1"
 # xsetwacom get "$tabletstylus" Area
 # default: 0 0 50800 31750
 # Enter under the resolution of your monitor:
-screenX=1920
-screenY=1080
+screenX=2560
+screenY=1440
 Xtabletmaxarea=50800
 Ytabletmaxarea=31750
 areaY=$(( $screenY * $Xtabletmaxarea / $screenX ))
