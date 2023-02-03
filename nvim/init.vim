@@ -20,8 +20,10 @@ Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
 Plug 'dylanaraps/wal.vim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
-Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mattn/emmet-vim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 call plug#end()
 
 set nocompatible
@@ -135,6 +137,9 @@ nnoremap <left> :vertical resize -10<cr>
 nnoremap <right> :vertical resize +10<cr>
 nnoremap <up> :resize -10<cr>
 nnoremap <down> :resize +10<cr>
+
+" marks
+nmap è `
 
 " Shift+h to hide everything :
 let s:hidden_all = 0

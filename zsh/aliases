@@ -7,6 +7,7 @@ alias gray="wal --theme base16-grayscale"
 alias dracula="wal --theme base16-dracula"
 alias malkuth="wal --theme malkuth"
 alias gotham="wal --theme sexy-gotham"
+alias spaceship1="wal -i ~/Images/wallpapers/spaceship01.jpg --backend colorz"
 
 # Apps
 alias vim="nvim"
@@ -16,6 +17,7 @@ alias bandcamp="campdown"
 
 # Shortcuts
 alias ls="lsd"
+alias la="lsd -a"
 alias cal="cal -3"
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
