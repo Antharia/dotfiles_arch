@@ -5,9 +5,9 @@ let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
 Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 " Plug 'tidalcycles/vim-tidal'
-let g:tidal_target = "terminal"
+" let g:tidal_target = "terminal"
 " Plug 'beauwilliams/statusline.lua'
 " Plug 'tpope/vim-fugitive' "wrapper for git
 " Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
@@ -241,6 +241,7 @@ let wiki_portfolio.name = 'portfolio'
 
 let g:vimwiki_list = [wiki_main, wiki_website, wiki_rpg, wiki_portfolio]
 
+au filetype vimwiki silent! iunmap <buffer> <Tab>
 " ---- Coc settings ---- "
 "
 autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
@@ -254,3 +255,7 @@ EOF
 lua << EOF
 require('lualine').setup()
 EOF
+
+" ---- copilot settings ---- "
+imap <silent><script><expr> <C-Space> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
