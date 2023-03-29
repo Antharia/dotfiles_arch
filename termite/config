@@ -1,4 +1,4 @@
 [ options ]
-font = Noto Nerd Font Mono 10
+font = NotoSansMono Nerd Font 8
 allow_bold = true
 browser = brave

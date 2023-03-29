@@ -42,6 +42,7 @@ syntax enable
 filetype indent on
 filetype plugin on
 set incsearch
+set ignorecase
 set mouse=a
 set nohlsearch
 set ruler
@@ -84,13 +85,15 @@ if (empty($TMUX))
   " endif
 endif
 
-" Use <c-space> to trigger completion.
+" Use <c-space> to trigger copilot completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" In Visual mode, use space to deselect.
+vmap <silent> <space> <esc>
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -242,20 +245,39 @@ let wiki_portfolio.name = 'portfolio'
 let g:vimwiki_list = [wiki_main, wiki_website, wiki_rpg, wiki_portfolio]
 
 au filetype vimwiki silent! iunmap <buffer> <Tab>
+
 " ---- Coc settings ---- "
-"
+
 autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
 
 " ---- nvim-autopairs settings ---- "
+
 lua << EOF
-require("nvim-autopairs").setup {}
+require("nvim-autopairs").setup() 
 EOF
 
 " ---- lualine settings ---- "
+"
 lua << EOF
-require('lualine').setup()
+require("lualine").setup()
 EOF
 
 " ---- copilot settings ---- "
 imap <silent><script><expr> <C-Space> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+
+" ---- nvim-tree settings ---- "
+lua << EOF
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+-- vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+EOF
+
+nmap <leader>n :NvimTreeToggle<CR>

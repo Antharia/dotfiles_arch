@@ -1,3 +1,11 @@
 {
-  "suggest.noselect": true
+  "suggest.noselect": true,
+  "svelte.enable-ts-plugin": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
+  "python.linting.flake8Enabled": true,
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.testing.provider": "pytest"
 }

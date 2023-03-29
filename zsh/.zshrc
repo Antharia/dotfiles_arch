@@ -58,3 +58,4 @@ export PATH="/home/antharia/.local/bin:$PATH"
 # Go installation
 export PATH=$PATH:/usr/local/go/bin
 
+export PATH="$PATH:/usr/lib/elixir/bin"
