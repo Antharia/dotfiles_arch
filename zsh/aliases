@@ -11,6 +11,7 @@ alias spaceship1="wal -i ~/Images/wallpapers/spaceship01.jpg --backend colorz"
 
 # Apps
 alias vim="nvim"
+alias track="timew"
 
 # Scripts
 alias bandcamp="campdown"

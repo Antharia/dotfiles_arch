@@ -24,6 +24,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 set nocompatible

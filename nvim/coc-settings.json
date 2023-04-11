@@ -4,7 +4,7 @@
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
-  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Enabled": false,
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false,
   "pyright.testing.provider": "pytest"
