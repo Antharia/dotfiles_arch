@@ -21,10 +21,11 @@ Plug 'dylanaraps/wal.vim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 " Plug 'kyazdani42/nvim-web-devicons'
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 
 set nocompatible
