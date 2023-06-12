@@ -14,7 +14,7 @@ INTERVAL=20
 # yourself. $3 is the key index. Use `xinput test "AT Translated Set 2 keyboard"`
 # to see key codes in real time.  Be sure to open a pull request for your
 # layout's condition!
-LAYOUT=qwerty
+LAYOUT=azerty
 
 case "$LAYOUT" in
 	qwerty) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 24 && $3 <= 33) || ($3 >= 37 && $3 <= 53) || ($3 >= 52 && $3 <= 58)'; ;;

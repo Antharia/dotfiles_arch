@@ -25,3 +25,10 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # go 
 export GOPATH="$HOME/.go"
+
+# GTK apps are slow
+export GTK_USE_PORTAL=0
+
+# Add ~/.local/bin to PATH
+export PATH="$HOME/.local/bin:$PATH"
+. "$HOME/.cargo/env"

@@ -1,5 +1,5 @@
 [global]
-    font = DejaVuSansMono 8
+    font = NotoMono Nerd Font 8
     icon_position = left
     allow_markup = yes
     format = "<b>%s</b>\n%b"
