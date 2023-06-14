@@ -240,10 +240,12 @@ let wiki_rpg.name = 'wiki_rpg'
 
 let wiki_portfolio = {}
 let wiki_portfolio.path = '~/Documents/wiki_portfolio'
-let wiki_portfolio.path_html = '~/Documents/wiki_portfolio/html'
-" let wiki_portfolio.syntax = 'markdown'
-" let wiki_portfolio.ext = '.md'
-let wiki_portfolio.name = 'portfolio'
+let wiki_portfolio.path_html = '$HOME/Repos/arctenis.github.io'
+let wiki_portfolio.name = 'arctenis.github.io'
+let wiki_portfolio.auto_export = 1
+let wiki_portfolio.html_template = "$HOME/Repos/arctenis.github.io/default.tpl"
+let wiki_portfolio.template_default = "default"
+let wiki_portfolio.template_ext = ".html"
 
 let g:vimwiki_list = [wiki_main, wiki_website, wiki_rpg, wiki_portfolio]
 
