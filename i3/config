@@ -69,7 +69,8 @@ bindsym $mod+p border pixel 1
 bindsym $mod+Shift+p border pixel 2
 
 # start a terminal
-bindsym $mod+Return exec sakura
+# bindsym $mod+Return exec sakura
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
