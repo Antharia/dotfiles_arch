@@ -18,7 +18,7 @@ Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, h
 " Plug 'morhetz/gruvbox'
 Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
 Plug 'dylanaraps/wal.vim'
-Plug 'nvim-lualine/lualine.nvim'
+" Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 " Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'mattn/emmet-vim'
@@ -26,7 +26,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 call plug#end()
 
 set nocompatible
@@ -157,6 +157,7 @@ function! ToggleHiddenAll()
         set laststatus=0
         set noshowcmd
         set nonumber
+        set signcolumn=no
     else
         let s:hidden_all = 0
         set showmode
@@ -164,6 +165,7 @@ function! ToggleHiddenAll()
         set laststatus=2
         set showcmd
         set number
+        set signcolumn=yes
     endif
 endfunction
 
@@ -259,12 +261,6 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
 
 lua << EOF
 require("nvim-autopairs").setup() 
-EOF
-
-" ---- lualine settings ---- "
-"
-lua << EOF
-require("lualine").setup()
 EOF
 
 " ---- copilot settings ---- "

@@ -1,4 +1,4 @@
 [ options ]
-font = NotoSansMono Nerd Font 8
+font = Inconsolata Nerd Font Mono 9
 allow_bold = true
 browser = brave

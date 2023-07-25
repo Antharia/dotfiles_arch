@@ -15,7 +15,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Hack Nerd Font 8
-font pango:NotoMono Nerd Font 8
+font pango:Inconsolata Nerd Font Mono 9
 #font pango:TerminessTTF Nerd Font 9
 #font pango:IosevkaTerm Nerd Font 9
 
@@ -69,8 +69,8 @@ bindsym $mod+p border pixel 1
 bindsym $mod+Shift+p border pixel 2
 
 # start a terminal
-# bindsym $mod+Return exec sakura
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec sakura
+# bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
@@ -96,7 +96,7 @@ bindsym $mod+Ctrl+k resize grow height 20px
 
 # split in vertical orientation
 bindsym $mod+v split v
-bindsym $mod+s split toggle; exec notify-send 'split toggle'
+bindsym $mod+s split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -247,11 +247,11 @@ set_from_resource $color15    color15
 
 # Theme colors
 # class                 border   backgr.   text        indic.     child_border
-client.focused          $color0  $color0   $color15    $color3    $color3
-client.focused_inactive $color0  $color0   $color1     $color3    $color0
-client.unfocused        $color0  $color0   $color2     $color3    $color0
-client.urgent           $color1  $color1   $color11    $color3    $color0
-client.placeholder      $color1  $color3   $color11    $color3    $color0
+client.focused          $color0  $color4   $color0     $color3    $color4
+client.focused_inactive $color0  $color0   $color4     $color3    $color0
+client.unfocused        $color0  $color0   $color4     $color3    $color0
+client.urgent           $color1  $color1   $color0     $color3    $color0
+client.placeholder      $color1  $color3   $color0     $color3    $color0
 client.background       $color0  $color0   $color1     $color0    $color1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -289,7 +289,7 @@ for_window [class="renoise"] floating enable
 for_window [class="reaper"] floating enable
 for_window [class="arandr"] floating enable
 for_window [class="pavucontrol"] floating enable
-for_window [class="Cadence"] floating enable
+for_window [class="Cadence"] floating enable center
 for_window [class="nitrogen"] floating enable
 
 # polybar
