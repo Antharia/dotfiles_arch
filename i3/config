@@ -15,7 +15,8 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Hack Nerd Font 8
-font pango:Inconsolata Nerd Font Mono 9
+#font pango:Inconsolata Nerd Font Mono 9
+font pango:JetBrainsMono Nerd Font Mono 8
 #font pango:TerminessTTF Nerd Font 9
 #font pango:IosevkaTerm Nerd Font 9
 
@@ -69,7 +70,7 @@ bindsym $mod+p border pixel 1
 bindsym $mod+Shift+p border pixel 2
 
 # start a terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec alacritty
 # bindsym $mod+Return exec termite
 
 # kill focused window
@@ -299,7 +300,7 @@ bindsym $mod+m exec --no-startup-id polybar-msg cmd show
 # dunst
 exec --no-startup-id dunst
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "NotoSansMono Nerd Font-8" -b
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "$color0" -nf "$color7" -sb "$color3" -sf "$color0" -fn "JetBrainsMono Nerd Font Mono-9" -b
 # start rofi
 bindsym $mod+r exec --no-startup-id rofi -show run 
 # bindsym $mod+r exec --no-startup-id rofi -show drun 

@@ -59,3 +59,7 @@ export PATH="/home/antharia/.local/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$PATH:/usr/lib/elixir/bin"
+export VST_PATH="~/Audio/plugins/"
+export VST3_PATH="~/Audio/plugins/"
+
+export OPENAI_API_KEY="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"

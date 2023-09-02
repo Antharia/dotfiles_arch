@@ -6,8 +6,8 @@ Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
 " Plug 'junegunn/goyo.vim'
-" Plug 'tidalcycles/vim-tidal'
-" let g:tidal_target = "terminal"
+Plug 'tidalcycles/vim-tidal'
+let g:tidal_target = "terminal"
 " Plug 'beauwilliams/statusline.lua'
 " Plug 'tpope/vim-fugitive' "wrapper for git
 " Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
@@ -27,6 +27,7 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
 " Plug 'lervag/vimtex'
+Plug 'simrat39/symbols-outline.nvim'
 call plug#end()
 
 set nocompatible
@@ -225,6 +226,7 @@ let g:vimwiki_auto_header=1
 let wiki_main = {}
 let wiki_main.path = '~/Documents/vimwiki'
 let wiki_main.path_html = '~/Documents/vimwiki/html'
+let wiki_main.auto_export = 0
 
 let wiki_website = {}
 let wiki_website.path = '~/Documents/wiki_website'
@@ -239,15 +241,16 @@ let wiki_rpg = {}
 let wiki_rpg.path = '~/Documents/wiki_rpg'
 let wiki_rpg.path_html = '~/Documents/wiki_rpg/html'
 let wiki_rpg.name = 'wiki_rpg'
+let wiki_rpg.auto_export = 1
 
 let wiki_portfolio = {}
 let wiki_portfolio.path = '~/Documents/wiki_portfolio'
 let wiki_portfolio.path_html = '$HOME/Repos/arctenis.github.io/'
 let wiki_portfolio.name = 'arctenis.github.io'
 let wiki_portfolio.auto_export = 1
-let wiki_portfolio.template_path = '$HOME/Repos/arctenis.github.io/templates/'
+let wiki_portfolio.template_path = '$HOME/Repos/arctenis.github.io/templates'
+let wiki_portfolio.template_default = 'default'
 let wiki_portfolio.template_ext = '.html'
-let wiki_portfolio.html_template = '$HOME/Repos/arctenis.github.io/templates/default.html'
 
 let g:vimwiki_list = [wiki_main, wiki_website, wiki_rpg, wiki_portfolio]
 
@@ -282,3 +285,74 @@ require("nvim-tree").setup()
 EOF
 
 nmap <leader>n :NvimTreeToggle<CR>
+
+" ----symbols-outline settings ---- "
+nmap <leader>o :SymbolsOutline<CR>
+
+lua << EOF
+require("symbols-outline").setup()
+
+local opts = {
+  highlight_hovered_item = true,
+  show_guides = true,
+  auto_preview = false,
+  position = 'right',
+  relative_width = true,
+  width = 25,
+  auto_close = false,
+  show_numbers = false,
+  show_relative_numbers = false,
+  show_symbol_details = true,
+  preview_bg_highlight = 'Pmenu',
+  autofold_depth = nil,
+  auto_unfold_hover = true,
+  fold_markers = { '', '' },
+  wrap = false,
+  keymaps = { -- These keymaps can be a string or a table for multiple keys
+    close = {"<Esc>", "q"},
+    goto_location = "<Cr>",
+    focus_location = "o",
+    hover_symbol = "<C-space>",
+    toggle_preview = "K",
+    rename_symbol = "r",
+    code_actions = "a",
+    fold = "h",
+    unfold = "l",
+    fold_all = "W",
+    unfold_all = "E",
+    fold_reset = "R",
+  },
+  lsp_blacklist = {},
+  symbol_blacklist = {},
+  symbols = {
+    File = { icon = "", hl = "@text.uri" },
+    Module = { icon = "", hl = "@namespace" },
+    Namespace = { icon = "", hl = "@namespace" },
+    Package = { icon = "", hl = "@namespace" },
+    Class = { icon = "𝓒", hl = "@type" },
+    Method = { icon = "ƒ", hl = "@method" },
+    Property = { icon = "", hl = "@method" },
+    Field = { icon = "", hl = "@field" },
+    Constructor = { icon = "", hl = "@constructor" },
+    Enum = { icon = "ℰ", hl = "@type" },
+    Interface = { icon = "ﰮ", hl = "@type" },
+    Function = { icon = "", hl = "@function" },
+    Variable = { icon = "", hl = "@constant" },
+    Constant = { icon = "", hl = "@constant" },
+    String = { icon = "𝓐", hl = "@string" },
+    Number = { icon = "#", hl = "@number" },
+    Boolean = { icon = "⊨", hl = "@boolean" },
+    Array = { icon = "", hl = "@constant" },
+    Object = { icon = "⦿", hl = "@type" },
+    Key = { icon = "🔐", hl = "@type" },
+    Null = { icon = "NULL", hl = "@type" },
+    EnumMember = { icon = "", hl = "@field" },
+    Struct = { icon = "𝓢", hl = "@type" },
+    Event = { icon = "🗲", hl = "@type" },
+    Operator = { icon = "+", hl = "@operator" },
+    TypeParameter = { icon = "𝙏", hl = "@parameter" },
+    Component = { icon = "", hl = "@function" },
+    Fragment = { icon = "", hl = "@constant" },
+  },
+}
+EOF
